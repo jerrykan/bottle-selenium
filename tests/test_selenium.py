@@ -1,7 +1,7 @@
 from bottle import app
 from selenium import webdriver
 
-from .liveserver import LiveServerTestCase
+from wsgi_liveserver import LiveServerTestCase
 
 # required to load the routes
 import main
