@@ -3,6 +3,7 @@ from selenium import webdriver
 
 from .liveserver import LiveServerTestCase
 
+# required to load the routes
 import main
 
 
