@@ -1,15 +1,13 @@
-from bottle import app
 from selenium import webdriver
 
 from wsgi_liveserver import LiveServerTestCase
 
-# required to load the routes
-import main
+from main import app
 
 
 class SeleniumTest(LiveServerTestCase):
     def create_app(self):
-        return app()
+        return app
 
     def setUp(self):
         self.driver = webdriver.Firefox()

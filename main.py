@@ -1,12 +1,14 @@
-from bottle import run, route, request, template
+from bottle import Bottle, run, request, template
+
+app = Bottle()
 
 
-@route('/')
+@app.route('/')
 def index():
     return template('index')
 
 
-@route('/query')
+@app.route('/query')
 def query():
     query = request.query.get('q')
     return template('query', query=query)
